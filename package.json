@@ -1,0 +1,39 @@
+{
+  "name": "react-ssr",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "client:server": "webpack serve --config ./build/webpack.client.js",
+    "client:dev": "webpack --config ./build/webpack.client.js",
+    "server:dev": "webpack --config ./build/webpack.server.js",
+    "build:dev": "yarn client:dev && yarn server:dev",
+    "server:start": "nodemon ./src/server/app.js"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.0",
+    "@babel/preset-react": "^7.13.13",
+    "@koa/router": "^10.0.0",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^5.2.4",
+    "html-webpack-plugin": "^5.3.1",
+    "ignore-loader": "^0.1.2",
+    "koa": "^2.13.1",
+    "koa-static": "^5.0.0",
+    "mini-css-extract-plugin": "^1.6.0",
+    "nodemon": "^2.0.7",
+    "webpack": "^5.36.2",
+    "webpack-cli": "^4.6.0",
+    "webpack-dev-server": "^3.11.2",
+    "webpack-merge": "^5.7.3",
+    "webpack-node-externals": "^3.0.0"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-redux": "^7.2.4",
+    "react-router-dom": "^5.2.0",
+    "redux": "^4.1.0"
+  }
+}
